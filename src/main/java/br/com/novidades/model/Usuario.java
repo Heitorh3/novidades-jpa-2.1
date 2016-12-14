@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Index;
 import javax.persistence.NamedNativeQuery;
 import javax.persistence.SqlResultSetMapping;
 import javax.persistence.Table;
@@ -34,7 +35,7 @@ import br.com.novidades.dto.AlertasPorUsuario;
 						})
 		})
 @Entity
-@Table(name = "usuario")
+@Table(name = "usuario", indexes={@Index(columnList="nome",unique=true)})
 public class Usuario implements Serializable{
 
 	private static final long serialVersionUID = 1L;

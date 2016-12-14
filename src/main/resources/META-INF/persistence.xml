@@ -10,7 +10,17 @@
       <property name="javax.persistence.jdbc.password" value="If07Nt13" />
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 
-      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <!-- none | drop-and-create | create | drop -->
+ 	  <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+ 	  
+ 	  <property name="javax.persistence.schema-generation.drop-source" value="metadata-then-script" />
+ 	  <property name="javax.persistence.schema-generation.drop-script-source" value="ddl/dropar-tabelas.sql"/> 
+ 	  
+ 	  <property name="javax.persistence.schema-generation.create-source" value="metadata-then-script"/>
+ 	  <property name="javax.persistence.schema-generation.create-script-source" value="ddl/criar-tabelas.sql"/>
+ 	  
+ 	  <property name="javax.persistence.sql-load-script-source" value="ddl/carregar-dados.sql"/>
+ 	  
       <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
       <property name="hibernate.show_sql" value="true" />
       <property name="hibernate.format_sql" value="true" />
