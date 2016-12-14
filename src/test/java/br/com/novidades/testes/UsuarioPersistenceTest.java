@@ -32,9 +32,9 @@ public class UsuarioPersistenceTest {
 	
 	@Test
 	public void deveRetornarDataDeNascimentoDoUsuario() {
-		Usuario usuario = this.manager.find(Usuario.class, 1L);
+		Usuario usuario = this.manager.find(Usuario.class, 3L);
 		
-		assertEquals(LocalDate.of(1990, 10, 2), usuario.getDataNascimento());
+		assertEquals(LocalDate.of(1984, 10, 2), usuario.getDataNascimento());
 	}
 	
 }
