@@ -1,4 +1,4 @@
-package br.com.novidades.teste.model;
+package br.com.novidades.testes;
 
 import java.util.Date;
 
