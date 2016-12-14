@@ -36,6 +36,7 @@ public class ConstructorResultTest {
 		lista.forEach(System.out::println);
 	}
 	
+	/*Outra forma de fazer */
 	@SuppressWarnings("unchecked")
 	@Test
 	public void alertasPorUsuario() {
